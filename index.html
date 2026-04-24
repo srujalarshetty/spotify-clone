@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Clone</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     SIDEBAR
+══════════════════════════════════════ -->
+<aside class="sidebar">
+
+  <!-- Logo -->
+  <div class="sidebar-logo">
+    <svg viewBox="0 0 167 50" xmlns="http://www.w3.org/2000/svg">
+      <path d="M83.996 0.277C37.747 0.277 0 38.024 0 84.274c0 46.252 37.747 84 83.996 84 46.254 0 84.004-37.748 84.004-84C168 38.024 130.25 0.277 83.996 0.277zm38.405 121.254a5.235 5.235 0 0 1-7.205 1.752c-19.739-12.062-44.571-14.8-73.844-8.108a5.234 5.234 0 0 1-6.249-3.946 5.232 5.232 0 0 1 3.944-6.25c32.012-7.312 59.529-4.167 81.705 9.388a5.238 5.238 0 0 1 1.649 7.164zm10.251-22.799c-2.065 3.358-6.47 4.414-9.827 2.351-22.603-13.893-57.043-17.917-83.806-9.799-3.674 1.114-7.549-.944-8.665-4.617a6.952 6.952 0 0 1 4.616-8.668c30.544-9.278 68.505-4.782 94.54 11.166 3.357 2.063 4.412 6.469 2.349 9.826l-.207-.259zm.88-23.744c-27.13-16.104-71.862-17.588-97.76-9.727a8.35 8.35 0 0 1-10.411-5.568 8.35 8.35 0 0 1 5.568-10.41c29.712-9.01 79.121-7.271 110.33 11.255a8.348 8.348 0 0 1 3.051 11.409 8.344 8.344 0 0 1-10.778 3.041z" transform="scale(0.29)"/>
+      <text x="52" y="36" font-family="DM Sans, sans-serif" font-size="22" font-weight="900" fill="white">Spotify</text>
+    </svg>
+  </div>
+
+  <!-- Nav links -->
+  <nav class="sidebar-nav">
+    <a class="nav-item active" href="#">
+      <i class="fa-solid fa-house"></i> Home
+    </a>
+    <a class="nav-item" href="#">
+      <i class="fa-solid fa-magnifying-glass"></i> Search
+    </a>
+  </nav>
+
+  <!-- Your Library -->
+  <div class="library-box">
+    <div class="library-header">
+      <div class="library-header-left">
+        <i class="fa-solid fa-book-bookmark"></i>
+        <span>Your Library</span>
+      </div>
+      <div class="lib-icons">
+        <button title="Add playlist"><i class="fa-solid fa-plus"></i></button>
+        <button title="Expand"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- Filter pills -->
+    <div class="library-filter">
+      <button class="filter-pill active">Playlists</button>
+      <button class="filter-pill">Artists</button>
+      <button class="filter-pill">Albums</button>
+    </div>
+
+    <!-- Playlist list -->
+    <div class="library-list">
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-9">♥</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Liked Songs</div>
+          <div class="playlist-meta">Playlist • 384 songs</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-1">🎵</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Discover Weekly</div>
+          <div class="playlist-meta"><span class="green-dot"></span>Playlist • Spotify</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-6">🌙</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Chill Vibes</div>
+          <div class="playlist-meta">Playlist • 42 songs</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-4">🔥</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Today's Top Hits</div>
+          <div class="playlist-meta">Playlist • Spotify</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-2">💜</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Taylor Swift</div>
+          <div class="playlist-meta">Artist</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-5">🌊</div>
+        <div class="playlist-info">
+          <div class="playlist-name">RapCaviar</div>
+          <div class="playlist-meta">Playlist • Spotify</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-10">🎸</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Rock Classics</div>
+          <div class="playlist-meta">Playlist • 89 songs</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-8">🎺</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Jazz in the Background</div>
+          <div class="playlist-meta">Playlist • 67 songs</div>
+        </div>
+      </div>
+      <div class="playlist-item">
+        <div class="img-placeholder small grad-3">🌟</div>
+        <div class="playlist-info">
+          <div class="playlist-name">Daily Mix 1</div>
+          <div class="playlist-meta"><span class="green-dot"></span>Playlist • Spotify</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════ -->
+<main class="main">
+
+  <!-- Sticky top bar -->
+  <div class="topbar">
+    <div class="topbar-nav">
+      <button><i class="fa-solid fa-chevron-left"></i></button>
+      <button><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <div class="topbar-right">
+      <button class="topbar-btn">Install App</button>
+      <button class="topbar-btn">Sign up</button>
+      <button class="topbar-btn primary">Log in</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1 class="greeting">Good evening</h1>
+
+    <!-- Quick picks grid -->
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="img-placeholder quick grad-9">♥</div>
+        <span class="quick-card-name">Liked Songs</span>
+        <button class="play-hover"><i class="fa-solid fa-play"></i></button>
+      </div>
+      <div class="quick-card">
+        <div class="img-placeholder quick grad-4">🔥</div>
+        <span class="quick-card-name">Today's Top Hits</span>
+        <button class="play-hover"><i class="fa-solid fa-play"></i></button>
+      </div>
+      <div class="quick-card">
+        <div class="img-placeholder quick grad-1">🎵</div>
+        <span class="quick-card-name">Discover Weekly</span>
+        <button class="play-hover"><i class="fa-solid fa-play"></i></button>
+      </div>
+      <div class="quick-card">
+        <div class="img-placeholder quick grad-6">🌙</div>
+        <span class="quick-card-name">Chill Vibes</span>
+        <button class="play-hover"><i class="fa-solid fa-play"></i></button>
+      </div>
+      <div class="quick-card">
+        <div class="img-placeholder quick grad-5">🌊</div>
+        <span class="quick-card-name">RapCaviar</span>
+        <button class="play-hover"><i class="fa-solid fa-play"></i></button>
+      </div>
+      <div class="quick-card">
+        <div class="img-placeholder quick grad-3">🌟</div>
+        <span class="quick-card-name">Daily Mix 1</span>
+        <button class="play-hover"><i class="fa-solid fa-play"></i></button>
+      </div>
+    </div>
+
+    <!-- Recently played -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Recently played</h2>
+        <a class="section-link">Show all</a>
+      </div>
+      <div class="cards-row">
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-2">🎤</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Anti Hero</div>
+          <div class="card-sub">Taylor Swift • Midnights</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-5">🎼</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Blinding Lights</div>
+          <div class="card-sub">The Weeknd • After Hours</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-8">🎸</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">As It Was</div>
+          <div class="card-sub">Harry Styles • Harry's House</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-10">🎹</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Stay</div>
+          <div class="card-sub">Justin Bieber, The Kid LAROI</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-3">🎷</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Shivers</div>
+          <div class="card-sub">Ed Sheeran • =</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Made for you -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Made for you</h2>
+        <a class="section-link">Show all</a>
+      </div>
+      <div class="cards-row">
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-1">🔮</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Daily Mix 1</div>
+          <div class="card-sub">Taylor Swift, Harry Styles and more</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-6">🌿</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Daily Mix 2</div>
+          <div class="card-sub">The Weeknd, Drake and more</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-4">⚡</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Discover Weekly</div>
+          <div class="card-sub">Your weekly mixtape of fresh music</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-9">🌌</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Release Radar</div>
+          <div class="card-sub">Catch all the latest music from artists you follow</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder grad-7">🔥</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">On Repeat</div>
+          <div class="card-sub">Songs you can't stop playing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular artists -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Popular artists</h2>
+        <a class="section-link">Show all</a>
+      </div>
+      <div class="cards-row">
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder round grad-2">🎤</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Taylor Swift</div>
+          <div class="card-sub">Artist</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder round grad-5">🎧</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">The Weeknd</div>
+          <div class="card-sub">Artist</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder round grad-10">🎵</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Ed Sheeran</div>
+          <div class="card-sub">Artist</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder round grad-8">🎶</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Harry Styles</div>
+          <div class="card-sub">Artist</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrap">
+            <div class="img-placeholder round grad-3">🌟</div>
+            <button class="card-play"><i class="fa-solid fa-play"></i></button>
+          </div>
+          <div class="card-title">Drake</div>
+          <div class="card-sub">Artist</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ══════════════════════════════════════
+     PLAYER BAR
+══════════════════════════════════════ -->
+<footer class="player">
+
+  <!-- Left: Track info -->
+  <div class="player-track">
+    <div class="player-album">🎵</div>
+    <div class="player-info">
+      <div class="player-song">Blinding Lights</div>
+      <div class="player-artist">The Weeknd</div>
+    </div>
+    <button class="player-heart liked" id="heartBtn" onclick="toggleHeart()">
+      <i class="fa-solid fa-heart"></i>
+    </button>
+    <button class="ctrl-btn" style="font-size:0.85rem;" title="Picture in picture">
+      <i class="fa-solid fa-up-right-from-square"></i>
+    </button>
+  </div>
+
+  <!-- Center: Playback controls -->
+  <div class="player-controls">
+    <div class="controls-row">
+      <button class="ctrl-btn active" title="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+      <button class="ctrl-btn" title="Previous"><i class="fa-solid fa-backward-step"></i></button>
+      <button class="play-btn" id="playBtn" onclick="togglePlay()">
+        <i class="fa-solid fa-pause" id="playIcon"></i>
+      </button>
+      <button class="ctrl-btn" title="Next"><i class="fa-solid fa-forward-step"></i></button>
+      <button class="ctrl-btn" title="Repeat"><i class="fa-solid fa-repeat"></i></button>
+    </div>
+    <div class="progress-row">
+      <span class="time">1:24</span>
+      <div class="progress-bar" onclick="seek(event, this)">
+        <div class="progress-fill"></div>
+        <div class="progress-dot"></div>
+      </div>
+      <span class="time right">3:20</span>
+    </div>
+  </div>
+
+  <!-- Right: Volume + extras -->
+  <div class="player-right">
+    <button class="ctrl-btn" title="Queue"><i class="fa-solid fa-list-music"></i></button>
+    <button class="ctrl-btn" title="Connect device"><i class="fa-solid fa-laptop"></i></button>
+    <div class="vol-row">
+      <button class="ctrl-btn" title="Volume"><i class="fa-solid fa-volume-high"></i></button>
+      <div class="volume-bar" onclick="setVolume(event, this)">
+        <div class="volume-fill"></div>
+      </div>
+    </div>
+    <button class="ctrl-btn" title="Full screen"><i class="fa-solid fa-expand"></i></button>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+  // Toggle play / pause icon
+  let playing = true;
+  function togglePlay() {
+    playing = !playing;
+    document.getElementById('playIcon').className =
+      playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+  }
+
+  // Toggle heart / liked state
+  function toggleHeart() {
+    document.getElementById('heartBtn').classList.toggle('liked');
+  }
+
+  // Click on progress bar → update fill width
+  function seek(e, bar) {
+    const rect = bar.getBoundingClientRect();
+    const pct  = (e.clientX - rect.left) / rect.width;
+    bar.querySelector('.progress-fill').style.width = (pct * 100) + '%';
+    bar.querySelector('.progress-dot').style.right  = ((1 - pct) * 100) + '%';
+  }
+
+  // Click on volume bar → update fill width
+  function setVolume(e, bar) {
+    const rect = bar.getBoundingClientRect();
+    const pct  = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    bar.querySelector('.volume-fill').style.width = (pct * 100) + '%';
+  }
+
+  // Filter pill active state
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
