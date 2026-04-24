@@ -5,7 +5,7 @@ This project recreates the modern Spotify interface with a stylish layout, sideb
 
 ## 🚀 Live Demo
 Add your GitHub Pages link here:  
-https://yourusername.github.io/spotify-clone/
+https://srujalarshetty.github.io/spotify-clone/
 
 ## 📌 Features
 
